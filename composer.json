@@ -1,12 +1,16 @@
 {
-    "name": "pantheon-upstreams/drupal-composer-managed",
-    "description": "Install Drupal 9 with Composer on Pantheon.",
+    "name": "thunder/thunder-project",
+    "description": "Project template for Thunder projects with composer",
     "type": "project",
-    "license": "MIT",
+    "license": "GPL-2.0-or-later",
     "repositories": [
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         },
         {
             "type": "path",
@@ -14,21 +18,21 @@
         }
     ],
     "require": {
-        "pantheon-upstreams/upstream-configuration": "dev-main",
-        "composer/installers": "^1.9",
+        "thunder/thunder-distribution": "~6.0@STABLE",
         "drupal/core-composer-scaffold": "^9.2",
-        "drupal/core-recommended": "^9.2",
+        "composer/installers": "^1.9",
+        "pantheon-upstreams/upstream-configuration": "dev-main",
         "pantheon-systems/drupal-integrations": "^9",
         "cweagans/composer-patches": "^1.7",
-        "drush/drush": "^11 || ^12"
+        "drush/drush": "^10.3"
     },
     "require-dev": {
-        "drupal/core-dev": "^9.2"
+        "drupal/core-dev": "^9.0"
     },
     "conflict": {
             "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
         "drupal-scaffold": {
