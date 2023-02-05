@@ -8,6 +8,8 @@ php_version: 8.1
 database:
   version: 10.4
 drush_version: 10
+search:
+  version: 8
 build_step: true
 protected_web_paths:
   - /private/
